@@ -1,0 +1,483 @@
+@font-face {
+    font-family: 'QuicksandBook';
+    src: url('fonts/Quicksand_Book-webfont.eot');
+    src: url('fonts/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Quicksand_Book-webfont.woff') format('woff'),
+    url('fonts/Quicksand_Book-webfont.ttf') format('truetype'),
+    url('fonts/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+html {
+	background-color: #413f3b;
+}
+
+
+
+body, main {
+	
+	display: flex;
+
+}
+
+body {
+
+	flex-direction:column;
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+  color:  #b5c1ad;
+  /*width: 100%;*/
+    
+	
+}
+
+/* Header */ 
+header {
+	
+	background-color: black;
+	height: 20px;
+	border-bottom: 0px solid
+
+}
+
+
+header a  {
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+    color:  #b5c1ad;
+}
+
+/*I know im not suppose to alter position of elements in the header but the navigation section was too far to the right*/
+header ul {
+	margin-left: 10px;
+  display: block;
+}
+
+ul li {
+
+	
+    color:  #b5c1ad;
+
+
+}
+
+
+
+
+
+
+.logo {
+	color:#ff6600;
+}
+main {
+
+	flex-direction: row;
+	flex: auto;	
+}
+
+
+/* Article */ 
+
+article {
+  align-items: center;
+	flex: 2;
+	overflow-y: auto;
+	background-color: #413f3b;
+	/*padding: 100px 15px;*/
+  font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+
+}
+
+article h1,h2,h3 {
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+	font-weight: 200;
+	word-spacing: 5px;
+	margin-bottom: 1px;
+
+}
+
+article h6 {
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+	font-weight: 200;
+	word-spacing: 3px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+
+}
+
+article p {
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+	color: #ffffff;
+	line-height: 20px;
+}
+article > *:first-child {
+    margin-top: -20px;
+}
+
+img.small {
+    width: 10px;
+}
+
+
+
+
+
+/* Tweets Article*/
+
+
+#tweets-box {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+}
+
+element.style {
+    position: static;
+    visibility: visible;
+    display: block;
+    transform: rotate(0deg);
+    max-width: 100%;
+    width: 200px !important;
+    min-width: 220px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Form*/ 
+
+.article-form{
+  text-align: center;
+  font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+  
+}
+.contact-title{
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 4s ease-in-out;
+}
+
+.contact-title h1 {
+  font-size: 24px;
+  margin-bottom: 50px;
+ 
+  
+
+}
+
+.form-control {
+ 
+  width: 450px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  color:  #b5c1ad;
+  font-size: 18px;
+  
+  margin-bottom:16px;
+  
+  
+}
+
+input {
+  height: 45px;
+
+}
+
+form .submit {
+  background: #ff6600;
+  border-color: transparent;
+  color:#fff;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+form .submit:hover {
+  background: #b5c1ad;
+}
+
+aside {
+	flex: 1;
+	overflow-y: auto;
+	background-color: #413f3b;
+
+
+}
+
+
+a {
+    
+    text-decoration:none;
+    color:  #b5c1ad;
+    
+  }
+
+a:hover {
+        color: #ffffff;
+  }
+
+
+.flex-container {
+ padding: 0;
+ margin:0;
+
+ list-style: none;
+ 
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.flex-item {
+  background: tomato;
+ 
+  width: 230px;
+  height: 180px;
+  margin-top: 10px;
+  
+  
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+.slides {
+  
+  height: 400px;
+  margin-top:20px;
+}
+
+article img {
+  width: 220px;
+  height: 180px;
+ 
+}
+
+
+
+
+
+/*Flip card code*/
+
+.flip-card {
+  background-color: transparent;
+  width: 220px;
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: black;
+  color:  #b5c1ad;
+  transform: rotateY(180deg);
+
+}
+
+.flip-card-back h4 {
+	
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+	
+	font-weight: 200;
+}
+.flip-card-back p{
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+}
+
+/* Buttons*/
+
+.btn {
+  position: absolute;
+  top: 50%;
+  right: 26%;
+  width: 100px;
+  height: 30px;
+  background: #ff6600;
+  border-color: transparent;
+  color:#fff;
+  font-size: 13px;
+  font-weight: bold;
+  
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #b5c1ad;
+}
+
+
+/* Footer */ 
+
+footer {
+	background-color: black;
+  flex-direction: row;
+  height: 40px !important;
+ 
+  
+}
+
+footer a {
+    color: rgba(0, 0, 0, 0.8);
+    color:  #b5c1ad;
+}
+footer li {
+ list-style: none;
+ color: #fff;
+
+}
+footer li:hover{
+  color:  #b5c1ad;
+
+
+}
+
+footer h6{
+  font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  word-spacing: 3px;
+  margin-top: 0px;
+  color:  #b5c1ad;
+ 
+
+}
+
+footer ul {
+  margin-top: 5px;
+}
+
+
+.social {
+  
+  flex: 1;
+}
+.
+.content{
+ 
+  flex: 1;
+}
+
+/*Social Media Buttons*/
+
+.fa {
+  padding: 5px;
+  font-size: 15px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #ff6600;
+  color: white;
+}
+
+.fa-twitter {
+  background: #ff6600;
+  color: white;
+}
+
+.fa-github {
+  background: #ff6600;
+  color: white;
+}
+
+
+
+/* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  height: 450px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+
+/*Media Queries */
+
+@media screen and (max-width: 600px ){
+  .social-media{
+    display: none;
+  }
+  
+}
+@media screen and (max-width: 800px ){
+  .social-media{
+    display: none;
+  }
+  
+}
+
+
+
